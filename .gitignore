@@ -1,35 +1,19 @@
-*.py[cod]
+import string
+import random
 
-# C extensions
-*.so
-
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
-
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
-
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+print 'Range from 1 to 10.'
+los = random.choice(range(1,11))
+a = 1
+def enka(a):
+  n = int(raw_input('Number: '))
+	if n > los:
+		a = a + 1
+		print 'Lower\n'
+		return enka(a)
+	elif n < los:
+		a = a + 1
+		print 'Higher\n'
+		return enka(a)
+	else:
+		print 'You guessed it!', los, '\nFor',a, 'time.\n\n'
+enka(a)
